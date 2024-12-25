@@ -38,33 +38,32 @@ if(isset($_POST['submit_btn'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icon@1.10.2/font/bootsrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>User Login Page</title>
+    <title>User Registration Page</title>
 </head>
 <body>
     <?php
         if(isset($message)){
-            foreach($message as $message){
+            foreach($message as $msg){  
                 echo '
                     <div class="message">
-                        <span>'.$message.'</span>
+                        <span>'.$msg.'</span>
                         <i class="bi bi-x-circle" onclick="this.parentElement.remove()"></i>
                     </div>
                 ';
             }
         }
     ?>
-    
+
     <section class="form-container">
         <form action="" method="post">
             <h3>Login Now</h3>
             <input type="email" name="email" placeholder="Enter your email" required>
             <input type="password" name="password" placeholder="Enter your password" required>
-            <input type="submit" name="submit_btn" class="btn" value="Login Now">
+            <input type="submit" name="submit_btn" class="btn" value="Register Now"> 
             <p>Do not have an account? <a href="register.php">Register Now</a></p>
         </form>
     </section>
-
 </body>
 </html>

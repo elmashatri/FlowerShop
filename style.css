@@ -10,6 +10,11 @@
     --pink:#e84393;
     --box-shadow:0 .5rem 1rem rgba(0,0,0,0.1);
 }
+.empty{
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 16px;
+}
 .message{
     text-align: center;
     margin: 2rem auto;
@@ -311,6 +316,20 @@ header{
 }
 .box-container .delete{
     padding: .6rem 15%;
+}
+.user-container .box-container, .message-container .box-container{
+    padding: 2%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minimax(25rem, 1rem));
+}
+.user-container .box-container .box{
+    padding-bottom: 3rem;
+}
+.update-container .box-container .box span{
+    color: var(--pink);
+}
+.update-container .box-container .box p:nth-child(4){
+    margin-bottom: 2rem;
 }
 
 /*------media screen---------------------- */

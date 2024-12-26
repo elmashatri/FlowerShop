@@ -7,6 +7,24 @@ if(!isset($user_id)){
     header('location:login.php');
 }
 
+/*Shtimi i produkteve ne cartt*/
+if (isset($_POST['add_to_cart'])) {
+    $product_id = $_POST['product_id'];
+    $product_name = $_POST['product_name'];
+    $product_price = $_POST['product_price'];
+    $product_image = $_POST['product_image'];
+    $product_quantity =$_POST['product_quantity'];
+
+    $cart_number = mysqli_query($conn, "SELECT * FROM `cart` WHERE name='$product_name' AND user_id='$user_id'") or die(mysqli_error($conn));
+    
+    if (mysqli_num_rows($cart_number) > 0) {
+        $message[] = 'Product already exists in cart';
+    } else {
+        mysqli_query($conn, "INSERT INTO `cart`(`user_id`, `pid`, `name`, `price`,`quantity`, `image`) VALUES ('$user_id', '$product_id', '$product_name', '$product_price','$product_quantity', '$product_image')") or die(mysqli_error($conn));
+        $message[] = 'Product successfully added to cart';
+    }
+}
+
 ?>
 
 <style type="text/css">
@@ -126,6 +144,7 @@ if(!isset($user_id)){
             <input type="hidden" name="product_id" value="<?php echo htmlspecialchars($fetch_products['id']); ?>">
             <input type="hidden" name="product_name" value="<?php echo htmlspecialchars($fetch_products['name']); ?>">
             <input type="hidden" name="product_price" value="<?php echo htmlspecialchars($fetch_products['price']); ?>">
+            <input type="hidden" name="product_quantity" value="1" min="0">
             <input type="hidden" name="product_image" value="<?php echo htmlspecialchars($fetch_products['image']); ?>">
             <div class="icon">
                 <a href="view_page.php?pid=<?php echo htmlspecialchars($fetch_products['id']); ?>" class="bi bi-eye-fill"></a>

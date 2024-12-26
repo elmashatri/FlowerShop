@@ -483,6 +483,145 @@ header{
     border: 1px solid var(--pink);
     color: var(--pink);
 }
+.banner{
+    width: 100%;
+    height: 500px;
+    background-image: url('image/bg-about.png');
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+.banner h1{
+    font-size: 3rem;
+    position: relative;
+    text-transform: capitalize;
+}
+.banner p{
+    font-size: 18px;
+}
+.view_page {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px; 
+    padding: 5% 8%;
+}
+
+.view_page img {
+    width: 40%; 
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.view_page .details {
+    width: 55%;
+}
+
+.view_page .details .name {
+    font-size: 2rem;
+    color: var(--pink);
+    margin-bottom: 1rem;
+}
+
+.view_page .details .description {
+    font-size: 1rem;
+    color: gray;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.view_page .details .price {
+    font-size: 1.5rem;
+    color: var(--pink);
+    margin-bottom: 1rem;
+}
+
+.view_page .details .actions {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+    margin-top: 1rem;
+}
+
+.view_page .details .actions .quantity {
+    width: 60px;
+    text-align: center;
+    border: 1px solid var(--pink);
+    border-radius: 5px;
+    padding: 0.5rem;
+}
+
+.view_page button {
+    background: var(--pink);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.view_page button:hover {
+    background: #ff3366; 
+}
+
+/*-------Wishlist page----------------------------------*/
+.disabled{
+    pointer-events: none;
+    opacity: .5;
+}
+.wishlist_total{
+    max-width: 1200px;
+    box-shadow: var(--box-shadow);
+    margin: 2rem auto;
+    border: 1px solid gainsboro;
+    text-align: center;
+    padding: 3rem 0;
+    line-height: 2;
+    text-transform: capitalize;
+}
+.wishlist_total p{
+    font-size: 1.5rem;
+}
+.wishlist_total a{
+    text-transform: capitalize;
+    font-size: 16px;
+    margin-right: 2rem;
+}
+.qty{
+    display: flex;
+    justify-content: space-between;
+}
+.qty input[type='number']{
+    width: 35%;
+}
+.qty input[type='submit']{
+    width: 55%;
+    cursor: pointer;
+    background: var(--pink);
+    box-shadow: none;
+    color: #fff;
+}
+.dlt {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.dlt .btn2 {  
+    background: var(--pink);
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.dlt .btn2:hover {
+    background-color: var(--pink);
+}
 
 /*------media screen---------------------- */
 @media (max-width: 991px){

@@ -483,7 +483,7 @@ header{
     border: 1px solid var(--pink);
     color: var(--pink);
 }
-.banner{
+.banner, .banner-2{
     width: 100%;
     height: 500px;
     background-image: url('image/bg-about.png');
@@ -623,6 +623,251 @@ header{
     background-color: var(--pink);
 }
 
+/*-------about us page----------------------*/
+.about{
+    padding: 4%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+.about .row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about .row .detail{
+    width: 50%;
+    margin: 1rem;
+    line-height: 1.5;
+    text-align: center;
+}
+.about .row .detail p{
+    margin-bottom: 1rem;
+}
+.about .row .img-box img{
+    width: 90%;
+}
+.about .row .detail h1{
+    text-align: center;
+    margin: 1rem 0;
+    color: var(--pink);
+}
+.banner-2{
+    background-image: url('image/1.jpg');
+}
+.banner-2 h1{
+    padding-bottom: 1.5rem;
+}
+.banner-2 .bt2{
+    border: 1px solid #fff;
+    color: #fff;
+}
+.services, .stylist, .testimonial-container{
+    background: url('image/2.png');
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    padding: 8% 0;
+}
+.services .box-container, .stylist .box-container{
+    grid-template-columns: repeat(auto-fit, minmax(25rem,1fr));
+}
+.services .box-container .box{
+    line-height: 2;
+    padding: 2rem 1rem;
+}
+.services .box-container .box h3{
+    margin-top: 2rem;
+    color: gray;
+}
+.services .box-container .box i{
+    font-size: 2rem;
+    border-radius: 50%;
+    color: #fff;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    background: var(--pink);
+    text-align: center;
+}
+.stylist{
+    background: url('image/2.png');
+    padding: 4% 0;
+    height: auto;
+}
+.stylist h3{
+    color: var(--pink);
+    text-transform: uppercase;
+    margin: .5rem 0;
+}
+.stylist p{
+    text-align: center;
+    text-transform: capitalize;
+}
+.stylist .img-box{
+    position: relative;
+}
+.stylist .img-box img{
+    width: 100%;
+}
+.stylist .social-links{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    visibility: hidden;
+    transition: .3s;
+}
+.stylist .img-box:hover .social-links{
+    visibility: visible;
+}
+.stylist .social-links i{
+    margin: .3rem;
+    background: #fff;
+    padding: .8rem;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    transition: .3s;
+}
+.stylist .social-links i:hover{
+    background: var(--pink);
+    color: #fff;
+}
+.testimonial-container{
+    padding: 6% 0;
+}
+.container{
+    position: relative;
+    perspective: 1000px;
+    padding-top: 2rem;
+}
+.container .testimonial-item{
+    background: var(--white-alpha-25);
+    border: 2px solid var(--white-alpha-40);
+    backdrop-filter: var(--backdrope-filter-blur);
+    box-shadow: var(--box-shadow);
+    border-radius: 5px;
+    color: gray;
+    margin: 0 auto;
+    text-align: center;
+    padding: 1rem;
+    transition: .4s;
+    display: none;
+    width: 50vw;
+}
+.container .testimonial-item.active{
+    display: block;
+}
+.container .testimonial-item h3{
+    color: var(--pink);
+    font-size: 1.3rem;
+    padding-bottom: .5rem;
+    text-transform: capitalize;
+}
+.container .testimonial-item img{
+    padding: 1rem 0;
+    border-radius: 50%;
+}
+.container .left-arrow, .container .right-arrow{
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--pink);
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.right-arrow{
+    right: 3rem;
+}
+.left-arrow{
+    margin: 3rem;
+}
+/*------contact section------------------- */
+.help{
+    padding: 5% 0;
+}
+.box-container .box h2{
+    font-size: 1.2rem;
+    color: var(--pink);
+    text-transform: uppercase;
+    margin: .5rem 0;
+}
+.box-container .box p{
+    font-size: 18px;
+    color: gray;
+    margin: 1rem 0;
+}
+.form-container{
+    background-image: url('image/contact.png');
+    background-position: center;
+    background-attachment: fixed;
+}
+.form-container .form-section{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 6%;
+    padding-bottom: 5%;
+}
+.form-container .form-section form{
+    width: 50vw;
+    background: var(--white-alpha-25);
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    border-radius: 10px;
+    backdrop-filter: var(--backdrope-filter-blur);
+}
+.form-container .form-section form h1{
+    text-align: center;
+    color: var(--pink);
+    margin: 1rem 0;
+}
+.form-container .form-section form p{
+    text-align: center;
+    color: gray;
+}
+.display-order{
+    box-shadow: var(--box-shadow);
+    width: 50vw;
+    margin: 1rem auto;
+    text-align: center;
+    line-height: 2;
+}
+.display-order span{
+    display: inline-block;
+    background: #ececec;
+    padding: .4rem;
+    margin: .5rem auto;
+    border-radius: 3px;
+    text-transform: capitalize;
+}
+.display-order .grand-total{
+    width: 90%;
+    background: var(--pink);
+    color: #fff;
+    cursor: pointer;
+}
+.checkout-form form{
+    width: 50vw;
+    box-shadow: var(--box-shadow);
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 10px;
+}
+.input-field label{
+    margin: .6rem 0;
+}
 /*------media screen---------------------- */
 @media (max-width: 991px){
     #menu-btn{
@@ -644,5 +889,9 @@ header{
     .header .flex .navbar a{
         display: block;
         margin: 2rem;
+    }
+    .form-container .form-section form{
+        width: 90%;
+        margin: auto;
     }
 }
